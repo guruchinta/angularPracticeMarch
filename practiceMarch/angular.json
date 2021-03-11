@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "practice": {
+    "practiceMarch": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/practice",
+            "outputPath": "dist/practiceMarch",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -31,9 +31,13 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -68,18 +72,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "practice:build"
+            "browserTarget": "practiceMarch:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "practice:build:production"
+              "browserTarget": "practiceMarch:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "practice:build"
+            "browserTarget": "practiceMarch:build"
           }
         },
         "test": {
@@ -116,19 +120,19 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "practice:serve"
+            "devServerTarget": "practiceMarch:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "practice:serve:production"
+              "devServerTarget": "practiceMarch:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "practice",
+  "defaultProject": "practiceMarch",
   "cli": {
-    "analytics": "fe341877-cf5e-4563-9b1c-c1c1e39a87c6"
+    "analytics": "8788d498-7078-4338-b115-62a5ef2e6e6b"
   }
 }
