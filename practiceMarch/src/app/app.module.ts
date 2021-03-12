@@ -3,14 +3,16 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ServersComponent } from './servers/servers.component';
 import { ServerComponent } from './server/server.component';
+import { Head1Component } from './head1/head1.component';
+import { Head2Component } from './head2/head2.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ServersComponent,
-    ServerComponent
+    ServerComponent,
+    Head1Component,
+    Head2Component
   ],
   imports: [
     BrowserModule,

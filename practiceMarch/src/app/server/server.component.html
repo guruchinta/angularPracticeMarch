@@ -1,1 +1,10 @@
 <p>server works!</p>
+
+<button *ngIf="serverStatus; else other_Content" (click)="changeStatus(0)"> Hide </button>
+<ng-template #other_Content>
+    <button (click)="changeStatus(1)"> Display </button>
+</ng-template>
+
+<p  *ngIf="serverStatus"> {{ server }} With ID {{ serverID}} </p>
+
+
